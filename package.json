@@ -1,0 +1,15 @@
+{
+  "name": "facebook-forward-bot",
+  "version": "1.0.0",
+  "description": "forward facebook group messages to discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Mezzolesta",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  }
+}
