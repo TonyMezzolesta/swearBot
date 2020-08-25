@@ -6,6 +6,7 @@
 
 1. Make sure you have node installed on your PC.
 2. IDE or Text Editor (I use VScode).
+3. Create a free account in Mongo Atlas and create a new cluster.
 
 ## Setup and Run
 
