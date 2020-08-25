@@ -1,10 +1,11 @@
 {
-  "name": "facebook-forward-bot",
+  "name": "swearBot",
   "version": "1.0.0",
-  "description": "forward facebook group messages to discord",
+  "description": "discord bot that records user swear words",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Tony Mezzolesta",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "mongoose": "^5.10.0"
+  },
+  "engines": {
+    "node": "10.15.3"
   }
 }
