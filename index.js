@@ -2,8 +2,9 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const mongoose = require('mongoose');
-
 const { saveSwear, sendHelp, getSwearInfo } = require('./functions');
+var express = require('express');
+var app = express();
 
 //global mongo connection
 mongoose.connect(process.env.MONGO_CONNECTION, {
@@ -57,3 +58,26 @@ client.on('message', async msg => {
 });
    
  
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+
+// index page 
+app.get('/', function(req, res) {
+    var dateFormat = new Date(client.readyTimestamp);
+    var readyTime = dateFormat.toLocaleTimeString();
+
+    res.render('pages/index', {
+        uptimeDays: (Math.round(client.uptime / (60*60*24*1000))),
+        uptimeHours: (Math.round(client.uptime / (60*60*1000))),
+        uptimeMinutes: (Math.round(client.uptime / (60*1000))),
+        uptimeSeconds: (Math.round(client.uptime / 1000)),
+        readyAt: client.readyAt,
+        readyTimestamp: readyTime
+    });
+});
+
+
+
+app.listen(process.env.PORT);
+console.log(`Server listening on port ${process.env.PORT}`);

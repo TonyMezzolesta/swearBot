@@ -1,0 +1,33 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+
+    <main>
+        <div class="jumbotron">
+            <h1>Swear Bot</h1>
+            <p>Discord swear bot.  Watch your language!</p>
+            <a href="https://github.com/TonyMezzolesta/swearBot">GitHub Repo</a>
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <h6>Uptime:  </h6>
+                <p> <%= uptimeDays %> Days  <%= uptimeHours %> Hours  <%= uptimeMinutes %> Minutes  <%= uptimeSeconds %> Seconds</p>
+            </div>
+            <div class="row justify-content-md-center">
+                <h6>Started:  </h6>
+                <p> <%= readyAt %></p>
+            </div>
+            <div class="row justify-content-md-center">
+                <h6>Start Time:  </h6>
+                <p> <%= readyTimestamp %></p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
